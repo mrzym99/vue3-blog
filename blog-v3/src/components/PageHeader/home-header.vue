@@ -39,7 +39,7 @@ const scrollListener = debounce(() => {
 }, 50);
 
 const initOneSentence = async () => {
-  fetch("https://api.vvhan.com/api/ian/rand?type=json")
+  fetch("https://wisdom.mrzym.top/api/random")
     .then((res) => res.json())
     .then((res) => {
       if (res.success) {
@@ -153,6 +153,7 @@ onBeforeUnmount(() => {
   padding: 0.5rem;
   cursor: pointer;
 }
+
 .font:hover {
   animation: anime 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate forwards;
 }
@@ -164,6 +165,7 @@ onBeforeUnmount(() => {
       "slnt" 15;
     text-shadow: none;
   }
+
   to {
     font-variation-settings:
       "wght" 800,
@@ -176,11 +178,13 @@ onBeforeUnmount(() => {
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(20px);
     opacity: 0.4;
   }
+
   50% {
     transform: translateY(0);
     opacity: 1;
